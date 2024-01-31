@@ -18,6 +18,7 @@ function generateText(req,res,next){
 
 app.use(generateText)
 
+
 app.get('/',(req,res)=>{
     res.sendFile(__dirname + '/public/index.html')
 })

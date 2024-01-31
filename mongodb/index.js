@@ -20,10 +20,20 @@ const fruit = new Fruit({
 
 const personSchema = new mongoose.Schema({
     name: String,
-    age: Number
+    age: Number,
+    favFruit : fruitSchema
 })
 
+
 const Person = mongoose.model("Person", personSchema)
+
+const relationPerson = new Person({
+    name:"New",
+    age:20,
+    favFruit: fruit
+})
+
+relationPerson.save()
 
 const person = new Person({
     name: "haroon",
